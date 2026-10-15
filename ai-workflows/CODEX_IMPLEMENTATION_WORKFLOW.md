@@ -4,6 +4,9 @@
 **Dataset:** Olist Brazilian E-Commerce Public Dataset (Kaggle: `olistbr/brazilian-ecommerce`)
 **Role:** Codex is the **implementation engineer**. Claude is the **independent reviewer**. The human project owner decides scope and accepts work.
 
+## Authoritative project reference
+Before planning or implementing any task, read `docs/PROJECT_PROBLEM.md` in full. Treat it as the primary authority for the business problem, ML objectives, target definitions, prediction boundary, dataset relationships, scope, constraints, deliverables and success criteria. Confirm that the assigned work aligns with it; report any conflict or unresolved interpretation instead of silently choosing a different definition. Preserve alignment in code, tests, documentation and the final handoff.
+
 ## 1. Project objective
 Build a reproducible, industry-style ML system predicting (1) the probability an order will arrive late (classification) and (2) its actual delivery duration in days (regression), based on information available **at order placement**. Build a data pipeline, evaluation system, trained model artifacts, FastAPI inference, tests, Docker/CI, monitoring, and documentation. Do not assume that components are already implemented.
 
@@ -51,7 +54,8 @@ This repository is both a production-style ML project and a learning resource. W
 
 ## 6. Required workflow for EVERY assigned task
 ### A. Inspect and plan
-- Read the task description and repository state; identify dependencies and existing components to reuse.
+- Read `docs/PROJECT_PROBLEM.md`, the task description and repository state; identify dependencies and existing components to reuse.
+- State how the planned work aligns with the authoritative problem definition and identify any conflict, assumption or unresolved decision that affects the assigned scope.
 - Produce a brief implementation plan including files affected, assumptions, acceptance criteria, tests, and out-of-scope items.
 - If an essential data/schema assumption cannot be checked, record it; proceed with safeguards rather than fabricating data.
 
